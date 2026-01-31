@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* Esto quita la barra de desplazamiento fea pero mantiene la funcionalidad */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
