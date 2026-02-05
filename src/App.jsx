@@ -20,6 +20,13 @@ const DOCUMENTOS = [
   { id: 92, nombre: "Grievance.docx", letra: "G", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQDQLRCejcLMSrOOH_iEUIH0AYcGIivVgxaXu66Pce9sxoY?e=S7BtmP", departamento: "Clinical Policy" },
   { id: 93, nombre: "Reportable Events.docx", letra: "R", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQBpBiQKpebRTIyiFc99cSY3AS2Z5CzmrAN3N1-wncwMBMg?e=2jif8e", departamento: "Clinical Policy" },
   { id: 94, nombre: "Resident Refusals.docx", letra: "R", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQAfsGQuGES-Spia4J0wXmpvAb98LEbcFAZdD7NxoNCx-Z8?e=kB3Kqs", departamento: "" },
+  { id: 95, nombre: "Alexa Speak2 Consent Form.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQCOVTG_FDn4TrjjahGgY0rpAR16fnGe5uKsG5YsaJtxRYQ?e=NX1bmN", departamento: "" },
+  { id: 96, nombre: "ADL Care Plan.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQAndTq7qaihQrFMQxPf5C7hAXN8RjWuv-tYMcjhS7UGsOA?e=9bBX4S", departamento: "Clinical Policy" },
+  { id: 97, nombre: "Alexa Speak2 Policy.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQBcorH_s71_TJDa64cOxQCkAX3xnkvbkSBs8myy5oi22Q4?e=WBM2w9", departamento: "Clinical Policy" },
+  { id: 98, nombre: "Approved Assitance Device.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQAlImmRLolSRob8pwuV-ql8AROaN-MiZdL2uiHcqSG_UCU?e=8GZvPu", departamento: "Clinical Policy" },
+  { id: 99, nombre: "Care Plan Review.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQCzLPHFdLjvQ4tXm3yXhu4DAYg6ZmPIbvkIb0bhygzkl28?e=ResSF2", departamento: "Clinical Policy" },
+  { id: 100, nombre: "Common Area Video Surveillance.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQDm-FEpDjfSQLpI-A_qIx6MAaCHkGAlu6dLZvf9DCFDboE?e=OLsm6C", departamento: "Clinical Policy" }
+  
 ];
 
 const CATEGORIAS = ['All', 'Clinical Policy', 'Job Description'];
