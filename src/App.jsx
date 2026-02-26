@@ -26,7 +26,6 @@ const DOCUMENTOS = [
   { id: 98, nombre: "Approved Assitance Device.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQAlImmRLolSRob8pwuV-ql8AROaN-MiZdL2uiHcqSG_UCU?e=8GZvPu", departamento: "Clinical Policy" },
   { id: 99, nombre: "Care Plan Review.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQCzLPHFdLjvQ4tXm3yXhu4DAYg6ZmPIbvkIb0bhygzkl28?e=ResSF2", departamento: "Clinical Policy" },
   { id: 100, nombre: "Common Area Video Surveillance.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQDm-FEpDjfSQLpI-A_qIx6MAaCHkGAlu6dLZvf9DCFDboE?e=OLsm6C", departamento: "Clinical Policy" }
-  
 ];
 
 const CATEGORIAS = ['All', 'Clinical Policy', 'Job Description'];
