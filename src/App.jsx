@@ -3,7 +3,7 @@ import { motion as Motion } from 'framer-motion';
 
 const CONFIG = {
   nombre: "Atlas Senior Living Forms Hub",
-  passwordCorrecto: "Atlas2026", 
+  passwordCorrecto: "Atlas2026",
   emailSoporte: "grosales@atlasseniorliving.com",
   version: "1.4.4" // Update: Drag & Drop Fixed & Robust
 };
@@ -25,7 +25,73 @@ const DOCUMENTOS = [
   { id: 97, nombre: "Alexa Speak2 Policy.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQBcorH_s71_TJDa64cOxQCkAX3xnkvbkSBs8myy5oi22Q4?e=WBM2w9", departamento: "Clinical Policy" },
   { id: 98, nombre: "Approved Assitance Device.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQAlImmRLolSRob8pwuV-ql8AROaN-MiZdL2uiHcqSG_UCU?e=8GZvPu", departamento: "Clinical Policy" },
   { id: 99, nombre: "Care Plan Review.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQCzLPHFdLjvQ4tXm3yXhu4DAYg6ZmPIbvkIb0bhygzkl28?e=ResSF2", departamento: "Clinical Policy" },
-  { id: 100, nombre: "Common Area Video Surveillance.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQDm-FEpDjfSQLpI-A_qIx6MAaCHkGAlu6dLZvf9DCFDboE?e=OLsm6C", departamento: "Clinical Policy" }
+  { id: 100, nombre: "Common Area Video Surveillance.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQDm-FEpDjfSQLpI-A_qIx6MAaCHkGAlu6dLZvf9DCFDboE?e=OLsm6C", departamento: "Clinical Policy" },
+  // A
+  { id: 101, nombre: "Abuse and Neglect Policy.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/mrost/EfkgfWdgv6REnYpg4OuSqCgBwACo8c3DFKRuFsIgOofjTQ?e=4xlCjv", departamento: "Clinical Policy" },
+  { id: 102, nombre: "Active Shooter Policy.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQBmPsVUHDKwRJHU5iTbzbxhAQb1bXBJOhgARaz5mURWeKY?e=7iKTmi", departamento: "Clinical Policy" },
+  { id: 103, nombre: "Academy Assesment Flyer.pdf", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2024/08/Atlas_Academy_Intro_Flyer.pdf", departamento: "" },
+  { id: 104, nombre: "A-Team Referral Flyer.pdf", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2025/04/The-A-Team-Referral-Flyer.pdf", departamento: "" },
+  { id: 105, nombre: "Academy Component.pdf", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2024/08/Atlas-Academy-Component-Flyer.pdf", departamento: "" },
+  { id: 106, nombre: "Academy Intro Flyer.pdf", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2024/08/Atlas_Academy_Intro_Flyer.pdf", departamento: "" },
+  { id: 107, nombre: "Academy, Lifestyle & SPIRIT Training.pdf", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/a8uxK5-Academy-Lifestyles-Spirit-Training.pdf", departamento: "" },
+  { id: 108, nombre: "Activities of Daily Living.docx", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/ADL-Policy.docx", departamento: "Clinical Policy" },
+  { id: 109, nombre: "Achieving Better Outcomes.xlsx", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/Achieving-Better-Outcomes-24-homebase-checklist.xlsx", departamento: "Clinical Policy" },
+  { id: 110, nombre: "Activities Policy and Procedure.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/mrost/EXz5bVyNSldPsn3v9fOs5KYBx59VoXYpCYr8yEX2iLIZfQ?e=7brdIF", departamento: "Clinical Policy" },
+  { id: 111, nombre: "ADL-Policy.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQD-p9Y3JLcET5IledwYI2JwAfydbuHp_ilghHwUXDFywKw?e=uBOy7t", departamento: "Clinical Policy" },
+  { id: 112, nombre: "Admission Criteria FL.docx", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/Admission-Criteria-FLORIDA-Policy.docx", departamento: "Clinical Policy" },
+  { id: 113, nombre: "Admission Discharge AL.docx", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/Admission-Discharge-Policy-Alabama-SCALF.docx", departamento: "Clinical Policy" },
+  { id: 114, nombre: "Adverse Drug Reaction.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQAnCPmYCtYkS5s1eOkzbdzLAQnT2rqjF_riLoWFxMXwJsE?e=13pPsx", departamento: "Clinical Policy" },
+  { id: 115, nombre: "Against Medical Advice.pdf", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2026/01/Against-Medical-Advice-1.pdf", departamento: "" },
+  { id: 116, nombre: "Aggression.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQD7YmzlJcmKSLsDLFbUTBUuAaLTWJVH8fbHpqhEoH_EZWA?e=JX3p0H", departamento: "Clinical Policy" },
+  { id: 117, nombre: "Alabama Assesment.docx", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/alabama-assessment-policy.docx", departamento: "Clinical Policy" },
+  { id: 118, nombre: "ALMC refrigerator microwaves.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQBd4GvXZ7afRYJZHuFIJriWAVgZaDduvLRbq2x1XkYfdHI?e=dxfNeg", departamento: "Clinical Policy" },
+  { id: 119, nombre: "AL Coordinator.docx", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Assisted-Living-Coordinator.docx", departamento: "Job Description" },
+  { id: 120, nombre: "Alternative Pharmacy.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQBU99f18CwGRYP6_n4eZf96ATUJISYTCHfVEEi7cZS5xcY?e=HbcNRk", departamento: "Clinical Policy" },
+  { id: 121, nombre: "Alzheimer's Special Care.docx", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/SC-Alzheimers-policy.docx", departamento: "Clinical Policy" },
+  { id: 122, nombre: "Anti-Harassment Policy.docx", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2024/03/Atlas-Anti-Harassment-Policy.docx", departamento: "" },
+  { id: 123, nombre: "Annual Associate Self Review.pdf", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2023/11/Associate_Self_Review_Editable_Form.pdf", departamento: "" },
+  { id: 124, nombre: "Annual Manager Review.pdf", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2023/11/Manager_Review_Editable_Form.pdf", departamento: "" },
+  { id: 125, nombre: "Apartment Checklist.pdf", letra: "A", link: "https://www.atlasseniorliving.net/wp-content/uploads/2022/03/Atlas_Apartment_Checklist_Hi_Res_1.pdf", departamento: "" },
+  { id: 126, nombre: "Assistive Devices Policy.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQD2rvYzsuEXQJaGaKQ4ssu9AfPZYgMtBpOHfvckmEznjmg?e=uUfpAy", departamento: "Clinical Policy" },
+  { id: 127, nombre: "Assisted Living Admission Order.docx", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2025/07/Assisted-Living-Admission-Order-Form.docx", departamento: "Clinical Policy" },
+  { id: 128, nombre: "Associate Break Policy.docx", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2024/03/Associate-Break-Policy-Acknowledgement.docx", departamento: "" },
+  { id: 129, nombre: "Associate Injury Form.pdf", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2023/02/Atlas_Associate_Injury_Form.pdf", departamento: "" },
+  { id: 130, nombre: "Associate Self Review.pdf", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2025/02/Atlas_Associate_Self_Review_Editable_Form.pdf", departamento: "" },
+  { id: 131, nombre: "Associate Survey.pdf", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2023/02/Atlas-Associate-Survey-2022.pdf", departamento: "" },
+  { id: 132, nombre: "Assumed Risk Covid No Mask.pdf", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2022/09/Assumed-Risk-Covid-No-Mask.pdf", departamento: "" },
+  { id: 133, nombre: "Assumed Risk Agreement.pdf", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2022/09/Assumed-Risk-Agreement-Form_For-Fill.pdf", departamento: "" },
+  { id: 134, nombre: "Atlas Application.pdf", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Atlas-Application.pdf", departamento: "" },
+  { id: 135, nombre: "Atlas Handbook 2025.pdf", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2025/07/Atlas-Handbook-2025.pdf", departamento: "" },
+  { id: 136, nombre: "Attendance Policy.docx", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2024/03/Atlas-Attendance-Policy.docx", departamento: "" },
+  { id: 137, nombre: "Atlas Speak 2 Codes.pdf", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2025/06/Atlas-Speak2-codes-leaving-apartment-_compressed.pdf", departamento: "" },
+  { id: 138, nombre: "Attempt to Collect Letter.docx", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2023/02/Attempt-to-Collect-Letter.docx", departamento: "" },
+  { id: 139, nombre: "Automobile Accident Claim Report.pdf", letra: "A", link: "https://atlasseniorliving.net/wp-content/uploads/2025/02/Automobile-Accident-Claim-Report-Form-02132025.pdf", departamento: "" },
+  // B
+  { id: 140, nombre: "Barber & Beauticians Preferences.docx", letra: "B", link: "https://atlasseniorliving.net/wp-content/uploads/2025/04/Barber-Beauticians-Preferences-Sheet.docx", departamento: "" },
+  { id: 141, nombre: "Bartender.docx", letra: "B", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Bartender.docx", departamento: "Job Description" },
+  { id: 142, nombre: "Bed Bug.docx", letra: "B", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQAsSzb-PWLGRIU8Q8aFb33KAQtakoPZtfb0-UkRR0J23W0?e=HJk5rr", departamento: "Clinical Policy" },
+  { id: 143, nombre: "Bed Rails Assisted Devices.docx", letra: "B", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQDRuaKk6AQGRKlB4uUaOaGqAXKrE7gXemLj8YQ3WRbfMzo?e=pOKggl", departamento: "Clinical Policy" },
+  { id: 144, nombre: "Blood Glucose Monitoring.docx", letra: "B", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQBmuBk-QEqBQ6BQspmTdm-KATGHFLI1JhROEVG3E9IQSTk?e=lwFg13", departamento: "Clinical Policy" },
+  { id: 145, nombre: "Bloodborne Pathogens Exposure.docx", letra: "B", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQAkOkTfQuD8Tq2VwsLz7kUUATWpHfiLh9wGw1kyZW-Strg?e=Dn5RzY", departamento: "Clinical Policy" },
+  { id: 146, nombre: "Business Office Coordinator.docx", letra: "B", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Business-Office-Coordinator.docx", departamento: "Job Description" },
+  { id: 147, nombre: "Blood Spills.docx", letra: "B", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/Cleaning-Spills-of-Blood-and-Bodily-Fluids-Policy.docx", departamento: "" },
+  { id: 148, nombre: "Business Services Standards.xlsx", letra: "B", link: "https://atlasseniorliving.net/wp-content/uploads/2024/04/Atlas-Business-Services-Standards.xlsx", departamento: "" },
+  // C
+  { id: 149, nombre: "Call Light.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQABgEFnaVR3QKkS6rwdesQVAQpFbefI3EedTuHocTR7RMI?e=SBgs3c", departamento: "Clinical Policy" },
+  { id: 150, nombre: "Call Out Policy.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQDKYqY6hbtYSZv4HmjNqXy-Ac3WY3TjlxiCf2d-cHk_sbQ?e=HiCFhy", departamento: "" },
+  { id: 151, nombre: "Care Associate.docx", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Care-Associate.docx", departamento: "Job Description" },
+  { id: 152, nombre: "Care Plan.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQCmeHJj664wRYDnpjr2u0N_AUB1yPuG_UGPJ3fouv31Yms?e=uvk5IE", departamento: "Clinical Policy" },
+  { id: 153, nombre: "Care Plan Review.docx", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2025/09/Care-Plan-Review-1.docx", departamento: "Clinical Policy" },
+  { id: 154, nombre: "Certified Medication Assistant.docx", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Certified-Medication-Assistant.docx", departamento: "Job Description" },
+  { id: 155, nombre: "CEO Letter.pdf", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2024/03/CEO-Letter.pdf", departamento: "" },
+  { id: 156, nombre: "Change in Health Status.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQC1s10ai1OGTaSdPJYeIv0PAfdbxayllBp4-jIJHZELYz4?e=xV4Uxx", departamento: "Clinical Policy" },
+  { id: 157, nombre: "Change of Condition.pdf", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Change-of-Condition-Policy.pdf", departamento: "Clinical Policy" },
+  { id: 158, nombre: "Chemical Safety.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQD2865g-ZHESbeIU4Vl2ilKAatFIoVPopwHFPE_TD1a8ms?e=TeP5Df", departamento: "Clinical Policy" },
+  { id: 159, nombre: "Circle of Excellence.docx", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2023/03/circle-of-excellence-criteria.docx", departamento: "Clinical Policy" },
+  { id: 160, nombre: "Clinical Standards.xlsx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:x:/p/mrost/ETMUjiepEy1Fuv7DN73Vs9oBJfROlBVjbRHq90aoipvNLw?e=XAUVUW", departamento: "" },
+  { id: 161, nombre: "CMA Request.link", letra: "C", link: "https://atlasseniorliving.net/forms-graphics/cma-new-user/", departamento: "" },
+
+
 ];
 
 const CATEGORIAS = ['All', 'Clinical Policy', 'Job Description'];
@@ -36,6 +102,7 @@ const OFFICE_STYLES = {
   docx: { icon: '📘', color: '#2B579A', bg: 'bg-blue-50', label: 'Word' },
   xls:  { icon: '📗', color: '#217346', bg: 'bg-green-50', label: 'Excel' },
   xlsx: { icon: '📗', color: '#217346', bg: 'bg-green-50', label: 'Excel' },
+  link: { icon: '🔗', color: '#2B579A', bg: 'bg-gray-50', label: 'Redirect link' },
   default: { icon: '📁', color: '#64748b', bg: 'bg-slate-50', label: 'File' }
 };
 
