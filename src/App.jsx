@@ -498,11 +498,16 @@ const OFFICE_STYLES = {
   default: { icon: '📁', color: '#64748b', bg: 'bg-slate-50', label: 'File' }
 };
 
+// --- SSO CONFIG ---
+// URL Sitio WordPress Interno
+const WP_URL = 'https://atlasseniorliving.net/';
+
 export default function App() {
   const [autenticado, setAutenticado] = useState(() => {
     const sesionActiva = localStorage.getItem('atlas_session');
     return sesionActiva === 'true';
   });
+  const [ssoLoading, setSsoLoading] = useState(false);
   const [inputPass, setInputPass] = useState('');
   const [busqueda, setBusqueda] = useState('');
   const [letraFiltro, setLetraFiltro] = useState('All');
@@ -533,7 +538,64 @@ export default function App() {
 
   useEffect(() => {
     localStorage.setItem('atlas_favs', JSON.stringify(favoritos));
+
+    const user = JSON.parse(localStorage.getItem('atlas_user') || '{}');
+    if (!user?.id) return; // No SSO session, save locally only
+
+    // Sync with WordPress (debounced to avoid spamming on every change)
+    const timer = setTimeout(() => {
+      fetch(`${WP_URL}/wp-json/atlas/v1/favorites`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ user_id: user.id, favorites: favoritos }),
+      }).catch(() => {}); // Fail silently
+    }, 800);
+
+    return () => clearTimeout(timer);
   }, [favoritos]);
+
+  // --- SSO: Verifica token de WordPress en la URL ---
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('sso_token');
+    if (!token || autenticado) return;
+
+    setSsoLoading(true);
+
+    fetch(`${WP_URL}/wp-json/atlas/v1/sso/validar`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ token }),
+    })
+      .then(r => r.json())
+      .then(data => {
+        if (data.valid) {
+          localStorage.setItem('atlas_session', 'true');
+          if (data.user) localStorage.setItem('atlas_user', JSON.stringify(data.user));
+          setAutenticado(true);
+          // Limpia el token de la URL sin recargar la pagina
+          window.history.replaceState({}, document.title, window.location.pathname);
+
+          // Load user favorites from WordPress
+          if (data.user?.id) {
+            fetch(`${WP_URL}/wp-json/atlas/v1/favorites?user_id=${data.user.id}`)
+              .then(r => r.json())
+              .then(favData => {
+                if (favData.favorites?.length) {
+                  setFavoritos(favData.favorites);
+                  localStorage.setItem('atlas_favs', JSON.stringify(favData.favorites));
+                }
+              })
+              .catch(() => {});
+          }
+        }
+      })
+      .catch(() => {
+        // Si falla la validacion, muestra el login normal
+      })
+      .finally(() => setSsoLoading(false));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const stellarBurst = (x, y, opts = {}) => {
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -893,8 +955,21 @@ export default function App() {
   
   const handleLogout = () => {
     localStorage.removeItem('atlas_session');
+    localStorage.removeItem('atlas_user');
     setAutenticado(false);
   };
+
+  if (ssoLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[#0a0a0c] font-sans antialiased p-4">
+        <div className="text-center">
+          <div className="text-4xl mb-4 animate-pulse">🔐</div>
+          <p className="text-white font-bold text-lg">Verifying session...</p>
+          <p className="text-slate-500 text-sm mt-2">Connecting with your organization account</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!autenticado) {
     return (
