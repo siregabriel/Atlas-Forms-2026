@@ -483,6 +483,8 @@ const DOCUMENTOS = [
   // Texas
   { id: 524, nombre: "Family & Move-In Form.docx", estado: "TEXAS", link: "https://atlasseniorliving.net/wp-content/uploads/2023/04/Atlas-Family-and-Movein-Forms-Texas.docx", departamento: "" },
   { id: 525, nombre: "Family & Move-In Form.pdf", estado: "TEXAS", link: "https://atlasseniorliving.net/wp-content/uploads/2023/04/Atlas-Family-and-Movein-Forms-Texas.pdf", departamento: "" },
+  // Miscellaneous
+  { id: 526, nombre: "Wheelchair Van Lift Policy.docx", letra: "W", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQAq1fUGslktTbffETr-mBgUAeSpUpbgsSlsrDuHmH-aeYs?e=A6yud2", departamento: "Clinical Policy" },
 ];
 
 const CATEGORIAS = ['All', 'Clinical Policy', 'Job Description', 'Redirect Link'];
