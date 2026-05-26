@@ -1277,7 +1277,7 @@ export default function App() {
             const colors = getColorClasses(doc.departamento);
             
             return (
-              <div key={doc.id} className="group bg-white p-3 rounded-2xl border border-slate-100 flex items-center justify-between hover:shadow-md hover:border-blue-200 transition-all duration-300 relative overflow-visible z-0 hover:z-10">
+              <div key={doc.id} className="group bg-white p-3 rounded-2xl border border-slate-100 flex items-center justify-between hover:shadow-md cursor-pointer  hover:border-blue-200 transition-all duration-300 relative overflow-visible z-0 hover:z-10">
                 <NotificationBadge tag={doc.tag} />
                 
                 <div className="flex items-center gap-3 flex-1 min-w-0">
