@@ -508,6 +508,8 @@ export default function App() {
     return sesionActiva === 'true';
   });
   const [ssoLoading, setSsoLoading] = useState(false);
+
+
   const [inputPass, setInputPass] = useState('');
   const [busqueda, setBusqueda] = useState('');
   const [letraFiltro, setLetraFiltro] = useState('All');
@@ -535,20 +537,20 @@ export default function App() {
   const [sugOpen, setSugOpen] = useState(false);
   const [sugIndex, setSugIndex] = useState(-1);
   const drawerCountRef = useRef(null);
+  const ssoValidatingRef = useRef(false);
 
   useEffect(() => {
     localStorage.setItem('atlas_favs', JSON.stringify(favoritos));
 
     const user = JSON.parse(localStorage.getItem('atlas_user') || '{}');
-    if (!user?.id) return; // No SSO session, save locally only
+    if (!user?.id) return;
 
-    // Sync with WordPress (debounced to avoid spamming on every change)
     const timer = setTimeout(() => {
       fetch(`${WP_URL}/wp-json/atlas/v1/favorites`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user_id: user.id, favorites: favoritos }),
-      }).catch(() => {}); // Fail silently
+      }).catch(() => {});
     }, 800);
 
     return () => clearTimeout(timer);
@@ -557,8 +559,41 @@ export default function App() {
   // --- SSO: Verifica token de WordPress en la URL ---
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
+
+    // Logout desde WordPress
+    if (params.get('logout') === 'true') {
+      localStorage.removeItem('atlas_session');
+      localStorage.removeItem('atlas_user');
+      setAutenticado(false);
+      window.history.replaceState({}, document.title, window.location.pathname);
+      return;
+    }
+
     const token = params.get('sso_token');
+
+    // Si ya hay sesion activa y no hay token nuevo, verifica con WordPress
+    if (!token && autenticado) {
+      fetch(`${WP_URL}/wp-json/atlas/v1/sso/check`, {
+        method: 'GET',
+        credentials: 'include',
+      })
+        .then(r => r.json())
+        .then(data => {
+          if (data.logged_in === false) {
+            localStorage.removeItem('atlas_session');
+            localStorage.removeItem('atlas_user');
+            setAutenticado(false);
+          }
+        })
+        .catch(() => {}); // Si falla, mantiene la sesion
+      return;
+    }
+
     if (!token || autenticado) return;
+
+    // Evita doble validacion por StrictMode o doble render
+    if (ssoValidatingRef.current) return;
+    ssoValidatingRef.current = true;
 
     setSsoLoading(true);
 
@@ -588,10 +623,15 @@ export default function App() {
               })
               .catch(() => {});
           }
+        } else {
+          // Token invalido, limpia la URL y muestra login normal
+          window.history.replaceState({}, document.title, window.location.pathname);
+          ssoValidatingRef.current = false;
         }
       })
       .catch(() => {
-        // Si falla la validacion, muestra el login normal
+        window.history.replaceState({}, document.title, window.location.pathname);
+        ssoValidatingRef.current = false;
       })
       .finally(() => setSsoLoading(false));
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -1031,7 +1071,7 @@ export default function App() {
             
             <div className="py-4 px-2"> 
               <div 
-                  className="grid grid-cols-2 gap-3 pt-3"
+                  className="grid grid-cols-1 gap-3 pt-3"
               >
                 
                 {/* --- MAPEO DE FAVORITOS (DRAGGABLE) --- */}
@@ -1229,7 +1269,7 @@ export default function App() {
         </div>
 
         {/* --- REPOSITORIO --- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-3">
           {archivosFiltrados.map(doc => {
             const style = getFileDetails(doc.nombre);
             const isFav = favoritos.includes(doc.id);
