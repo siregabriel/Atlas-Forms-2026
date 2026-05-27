@@ -5,7 +5,7 @@ const CONFIG = {
   nombre: "Atlas Senior Living Forms Hub",
   passwordCorrecto: "Atlas2026",
   emailSoporte: "grosales@atlasseniorliving.com",
-  version: "1.4.4" // Update: Drag & Drop Fixed & Robust
+  version: "1.4.5" // Update: Drag & Drop Fixed & Robust
 };
 
 // --- BASE DE DATOS ---
@@ -490,10 +490,10 @@ const DOCUMENTOS = [
 const CATEGORIAS = ['All', 'Clinical Policy', 'Job Description', 'Redirect Link'];
 
 const OFFICE_STYLES = {
-  pdf:  { icon: '📕', color: '#EE3322', bg: 'bg-red-50',  label: 'PDF' },
-  doc:  { icon: '📘', color: '#2B579A', bg: 'bg-blue-50', label: 'Word' },
+  pdf: { icon: '📕', color: '#EE3322', bg: 'bg-red-50', label: 'PDF' },
+  doc: { icon: '📘', color: '#2B579A', bg: 'bg-blue-50', label: 'Word' },
   docx: { icon: '📘', color: '#2B579A', bg: 'bg-blue-50', label: 'Word' },
-  xls:  { icon: '📗', color: '#217346', bg: 'bg-green-50', label: 'Excel' },
+  xls: { icon: '📗', color: '#217346', bg: 'bg-green-50', label: 'Excel' },
   xlsx: { icon: '📗', color: '#217346', bg: 'bg-green-50', label: 'Excel' },
   pptx: { icon: '📙', color: '#FF6802', bg: 'bg-orange-50', label: 'PowerPoint' },
   link: { icon: '🔗', color: '#2B579A', bg: 'bg-gray-50', label: 'URL' },
@@ -515,16 +515,16 @@ export default function App() {
   const [inputPass, setInputPass] = useState('');
   const [busqueda, setBusqueda] = useState('');
   const [letraFiltro, setLetraFiltro] = useState('All');
-  const [catFiltro, setCatFiltro] = useState('All'); 
+  const [catFiltro, setCatFiltro] = useState('All');
   const [stateFiltro, setStateFiltro] = useState('');
   const [mostrarFavoritos, setMostrarFavoritos] = useState(true);
-  
+
   // DRAG & DROP STATES
   const [draggedItemId, setDraggedItemId] = useState(null);
-  const [dropTargetIndex, setDropTargetIndex] = useState(null); 
+  const [dropTargetIndex, setDropTargetIndex] = useState(null);
 
-  
-  
+
+
   const [favoritos, setFavoritos] = useState(() => {
     const saved = localStorage.getItem('atlas_favs');
     try {
@@ -552,7 +552,7 @@ export default function App() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user_id: user.id, favorites: favoritos }),
-      }).catch(() => {});
+      }).catch(() => { });
     }, 800);
 
     return () => clearTimeout(timer);
@@ -587,7 +587,7 @@ export default function App() {
             setAutenticado(false);
           }
         })
-        .catch(() => {}); // Si falla, mantiene la sesion
+        .catch(() => { }); // Si falla, mantiene la sesion
       return;
     }
 
@@ -623,7 +623,7 @@ export default function App() {
                   localStorage.setItem('atlas_favs', JSON.stringify(favData.favorites));
                 }
               })
-              .catch(() => {});
+              .catch(() => { });
           }
         } else {
           // Token invalido, limpia la URL y muestra login normal
@@ -636,7 +636,7 @@ export default function App() {
         ssoValidatingRef.current = false;
       })
       .finally(() => setSsoLoading(false));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const stellarBurst = (x, y, opts = {}) => {
@@ -794,26 +794,26 @@ export default function App() {
     const yaEsFavorito = favoritos.includes(id);
 
     if (!yaEsFavorito) {
-        const rect = e.currentTarget.getBoundingClientRect();
-        const x = rect.left + rect.width / 2;
-        const y = rect.top + rect.height / 2;
-        stellarBurst(x, y);
-        if (drawerCountRef.current) {
-          const r = drawerCountRef.current.getBoundingClientRect();
-          const cx = r.left + r.width / 2;
-          const cy = r.top + r.height / 2;
-          stellarBurst(cx, cy, { durationMs: 5600, speedScale: 0.8, lifeDecay: 0.016, size: 160 });
-        }
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = rect.left + rect.width / 2;
+      const y = rect.top + rect.height / 2;
+      stellarBurst(x, y);
+      if (drawerCountRef.current) {
+        const r = drawerCountRef.current.getBoundingClientRect();
+        const cx = r.left + r.width / 2;
+        const cy = r.top + r.height / 2;
+        stellarBurst(cx, cy, { durationMs: 5600, speedScale: 0.8, lifeDecay: 0.016, size: 160 });
+      }
 
-        setAnimatingIds(prev => [...prev, id]);
-        setDrawerGlowing(true);
-        setTimeout(() => {
-            setAnimatingIds(prev => prev.filter(itemId => itemId !== id));
-            setDrawerGlowing(false);
-        }, 800);
-        setFavoritos(prev => [...prev, id]);
+      setAnimatingIds(prev => [...prev, id]);
+      setDrawerGlowing(true);
+      setTimeout(() => {
+        setAnimatingIds(prev => prev.filter(itemId => itemId !== id));
+        setDrawerGlowing(false);
+      }, 800);
+      setFavoritos(prev => [...prev, id]);
     } else {
-        setFavoritos(prev => prev.filter(favId => favId !== id));
+      setFavoritos(prev => prev.filter(favId => favId !== id));
     }
   };
 
@@ -824,48 +824,48 @@ export default function App() {
     e.dataTransfer.setData("text/plain", id);
   };
 
-  
+
 
   const handleDragOver = (e, index) => {
-    e.preventDefault(); 
+    e.preventDefault();
     // We allow bubbling so the container can handle auto-scroll!
     // e.stopPropagation(); 
-    
+
     // --- CALCULATE DROP TARGET ---
     const rect = e.currentTarget.getBoundingClientRect();
     const midpoint = (rect.left + rect.right) / 2;
-    
+
     // If mouse is on right half, target is next index
     let newDropIndex = index;
     if (e.clientX > midpoint) {
-        newDropIndex = index + 1;
+      newDropIndex = index + 1;
     }
-    
+
     if (dropTargetIndex !== newDropIndex) {
-        setDropTargetIndex(newDropIndex);
+      setDropTargetIndex(newDropIndex);
     }
   };
 
-  
+
 
   const handleDrop = (e, targetId) => {
     e.preventDefault();
     e.stopPropagation(); // Stop bubbling to container drop
-    
+
     if (!draggedItemId || draggedItemId === targetId) {
-        setDraggedItemId(null);
-        setDropTargetIndex(null);
-        return;
+      setDraggedItemId(null);
+      setDropTargetIndex(null);
+      return;
     }
 
     const sourceIndex = favoritos.indexOf(draggedItemId);
     const targetIndex = favoritos.indexOf(targetId);
 
     if (sourceIndex === -1 || targetIndex === -1) {
-        // Fallback or error state
-        setDraggedItemId(null);
-        setDropTargetIndex(null);
-        return;
+      // Fallback or error state
+      setDraggedItemId(null);
+      setDropTargetIndex(null);
+      return;
     }
 
     // Calculate insertion index
@@ -881,19 +881,19 @@ export default function App() {
     // Splice logic:
     // [A, B, C, D]. Move A(0) to after C(2). Target C is at 2. Insert at 3.
     // Remove A -> [B, C, D]. Insert at 3-1 = 2? -> [B, C, A, D]. Correct.
-    
+
     // [A, B, C, D]. Move D(3) to before B(1). Target B is at 1. Insert at 1.
     // Remove D -> [A, B, C]. Insert at 1. -> [A, D, B, C]. Correct.
 
     let finalInsertIndex = insertIndex;
     if (sourceIndex < insertIndex) {
-        finalInsertIndex -= 1;
+      finalInsertIndex -= 1;
     }
 
     const newFavoritos = [...favoritos];
     const [movedItem] = newFavoritos.splice(sourceIndex, 1);
     newFavoritos.splice(finalInsertIndex, 0, movedItem);
-    
+
     setFavoritos(newFavoritos);
     setDraggedItemId(null);
     setDropTargetIndex(null);
@@ -904,14 +904,14 @@ export default function App() {
     setDropTargetIndex(null);
   };
 
-  
+
 
   const getDisplayName = (fileName) => {
     const idx = fileName.lastIndexOf('.');
     if (idx <= 0) return fileName;
     return fileName.slice(0, idx);
   };
-  
+
   const handleSuggestionSelect = (doc) => {
     setBusqueda(getDisplayName(doc.nombre));
     setSugOpen(false);
@@ -924,22 +924,22 @@ export default function App() {
 
   const getColorClasses = (dept) => {
     switch (dept) {
-      case 'Clinical Policy': 
+      case 'Clinical Policy':
         return {
           active: 'bg-teal-100 text-teal-800 border-teal-300 shadow-teal-100',
           hover: 'hover:bg-teal-50 hover:text-teal-600 hover:border-teal-200'
         };
-      case 'Job Description': 
+      case 'Job Description':
         return {
           active: 'bg-purple-100 text-purple-800 border-purple-300 shadow-purple-100',
           hover: 'hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200'
         };
-      case 'Redirect Link': 
+      case 'Redirect Link':
         return {
           active: 'bg-gray-50 text-gray-700 border-gray-400 shadow-gray-200',
           hover: 'hover:bg-gray-50 hover:text-gray-700 hover:border-gray-300'
         };
-      default: 
+      default:
         return {
           active: 'bg-slate-900 text-white border-slate-900 shadow-slate-300',
           hover: 'hover:bg-slate-100 hover:text-slate-800 hover:border-slate-300'
@@ -948,15 +948,15 @@ export default function App() {
   };
 
   const abecedario = ['All', ...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')];
-  const STATES = ['ALABAMA','FLORIDA','GEORGIA','KENTUCKY','MARYLAND','MISSISSIPPI','SOUTH CAROLINA','TENNESSEE','TEXAS','VIRGINIA'];
-  
+  const STATES = ['ALABAMA', 'FLORIDA', 'GEORGIA', 'KENTUCKY', 'MARYLAND', 'MISSISSIPPI', 'SOUTH CAROLINA', 'TENNESSEE', 'TEXAS', 'VIRGINIA'];
+
   const archivosFiltrados = useMemo(() => {
     return DOCUMENTOS.filter(doc => {
       const nombreSinExt = getDisplayName(doc.nombre).toLowerCase();
       const cumpleNombre = nombreSinExt.includes(busqueda.toLowerCase());
       const cumpleLetra = letraFiltro === 'All' || doc.letra === letraFiltro;
       const cumpleCat = catFiltro === 'All' || doc.departamento === catFiltro;
-      const cumpleEstado = !stateFiltro 
+      const cumpleEstado = !stateFiltro
         || (doc.estado && doc.estado === stateFiltro)
         || nombreSinExt.includes(stateFiltro.toLowerCase());
       return cumpleNombre && cumpleLetra && cumpleCat && cumpleEstado;
@@ -988,13 +988,13 @@ export default function App() {
 
   const handleLogin = () => {
     if (inputPass === CONFIG.passwordCorrecto) {
-      localStorage.setItem('atlas_session', 'true'); 
+      localStorage.setItem('atlas_session', 'true');
       setAutenticado(true);
     } else {
       alert('Incorrect code');
     }
   };
-  
+
   const handleLogout = () => {
     localStorage.removeItem('atlas_session');
     localStorage.removeItem('atlas_user');
@@ -1019,8 +1019,8 @@ export default function App() {
         <div className="w-full max-w-md p-8 bg-[#16161a] border border-white/10 rounded-[2.5rem] shadow-2xl text-center">
           <div className="inline-block p-4 bg-blue-600/10 rounded-3xl mb-4 border border-blue-500/20 text-4xl">💎</div>
           <h2 className="text-3xl font-bold text-white mb-8 tracking-tight">{CONFIG.nombre}</h2>
-          <input 
-            type="password" 
+          <input
+            type="password"
             placeholder="Enter access code"
             className="w-full bg-black/40 border border-white/5 text-white p-5 rounded-2xl mb-6 outline-none text-center tracking-widest focus:border-blue-500/50 transition-all"
             onChange={(e) => setInputPass(e.target.value)}
@@ -1044,12 +1044,12 @@ export default function App() {
 
         {/* --- CORTINA DE FAVORITOS --- */}
         <div className="mb-8 animate-appear-softly lg:float-right lg:w-[22rem] lg:ml-6 lg:mb-0">
-          <button 
+          <button
             onClick={() => setMostrarFavoritos(!mostrarFavoritos)}
             className="w-full flex items-center justify-between py-2 px-1 hover:bg-slate-100/50 rounded-xl transition-all cursor-pointer group"
           >
             <div className="flex items-center gap-3">
-              <Motion.div 
+              <Motion.div
                 ref={drawerCountRef}
                 animate={drawerGlowing ? { scale: 1.3, backgroundColor: "#3b82f6", boxShadow: "0 0 0 4px #bfdbfe" } : { scale: 1, backgroundColor: "#2563eb", boxShadow: "0 0 0 0px transparent" }}
                 transition={{ type: "spring", stiffness: 280, damping: 18 }}
@@ -1057,7 +1057,7 @@ export default function App() {
               >
                 {validFavorites.length}
               </Motion.div>
-              <Motion.span 
+              <Motion.span
                 animate={drawerGlowing ? { scale: 1.05, color: "#2563eb", textShadow: "0 0 10px rgba(37,99,235,0.5)" } : { scale: 1, color: "#334155", textShadow: "none" }}
                 className="font-bold text-slate-700 text-lg tracking-wide"
               >
@@ -1070,31 +1070,31 @@ export default function App() {
           </button>
 
           <div className={`transition-opacity duration-500 ease-in-out ${mostrarFavoritos ? 'opacity-100' : 'opacity-0 hidden'}`}>
-            
-            <div className="py-4 px-2"> 
-              <div 
-                  className="grid grid-cols-1 gap-3 pt-3"
+
+            <div className="py-4 px-2">
+              <div
+                className="grid grid-cols-1 gap-3 pt-3"
               >
-                
+
                 {/* --- MAPEO DE FAVORITOS (DRAGGABLE) --- */}
                 {validFavorites.map((favId, index) => {
                   const doc = DOCUMENTOS.find(d => d.id === favId);
                   if (!doc) return null;
                   const style = getFileDetails(doc.nombre);
                   const deptColors = getColorClasses(doc.departamento);
-                  
+
                   const isDraggedItem = draggedItemId === doc.id;
                   const draggedVisualIndex = validFavorites.indexOf(draggedItemId);
 
                   return (
-                    <div 
-                        key={doc.id} 
-                        draggable={true}
-                        onDragStart={(e) => handleDragStart(e, doc.id)}
-                        onDragEnd={handleDragEnd}
-                        onDragOver={(e) => handleDragOver(e, index)}
-                        onDrop={(e) => handleDrop(e, doc.id)}
-                        className={`
+                    <div
+                      key={doc.id}
+                      draggable={true}
+                      onDragStart={(e) => handleDragStart(e, doc.id)}
+                      onDragEnd={handleDragEnd}
+                      onDragOver={(e) => handleDragOver(e, index)}
+                      onDrop={(e) => handleDrop(e, doc.id)}
+                      className={`
                             w-full
                             bg-gradient-to-br from-white/60 to-white/30 border border-white/60 
                             text-slate-800 p-4 rounded-2xl transition-all relative group flex flex-col justify-between 
@@ -1104,55 +1104,55 @@ export default function App() {
                         `}
                     >
                       {/* --- LÍNEA GUÍA DE DROP (DROP INDICATOR) --- */}
-                      {dropTargetIndex !== null && 
-                       !isDraggedItem && 
-                       dropTargetIndex !== draggedVisualIndex && 
-                       dropTargetIndex !== draggedVisualIndex + 1 && (
+                      {dropTargetIndex !== null &&
+                        !isDraggedItem &&
+                        dropTargetIndex !== draggedVisualIndex &&
+                        dropTargetIndex !== draggedVisualIndex + 1 && (
                           <>
-                             {dropTargetIndex === index && (
-                                <div className="absolute -left-2 top-0 bottom-0 w-1 bg-blue-500 rounded-full z-50 shadow-[0_0_10px_rgba(59,130,246,0.8)] pointer-events-none animate-pulse h-full scale-y-90 origin-center" />
-                             )}
-                             {index === validFavorites.length - 1 && dropTargetIndex === index + 1 && (
-                                <div className="absolute -right-2 top-0 bottom-0 w-1 bg-blue-500 rounded-full z-50 shadow-[0_0_10px_rgba(59,130,246,0.8)] pointer-events-none animate-pulse h-full scale-y-90 origin-center" />
-                             )}
+                            {dropTargetIndex === index && (
+                              <div className="absolute -left-2 top-0 bottom-0 w-1 bg-blue-500 rounded-full z-50 shadow-[0_0_10px_rgba(59,130,246,0.8)] pointer-events-none animate-pulse h-full scale-y-90 origin-center" />
+                            )}
+                            {index === validFavorites.length - 1 && dropTargetIndex === index + 1 && (
+                              <div className="absolute -right-2 top-0 bottom-0 w-1 bg-blue-500 rounded-full z-50 shadow-[0_0_10px_rgba(59,130,246,0.8)] pointer-events-none animate-pulse h-full scale-y-90 origin-center" />
+                            )}
                           </>
-                      )}
+                        )}
 
                       <NotificationBadge tag={doc.tag} />
-                      
+
                       {/* 6 PUNTOS (DRAG HANDLE) */}
                       <div className="absolute top-2 left-2 text-slate-400/50 group-hover:text-slate-400 transition-colors pointer-events-none">
-                         <svg width="8" height="12" viewBox="0 0 8 12" fill="currentColor">
-                            <circle cx="2" cy="2" r="1.5"/><circle cx="2" cy="6" r="1.5"/><circle cx="2" cy="10" r="1.5"/>
-                            <circle cx="6" cy="2" r="1.5"/><circle cx="6" cy="6" r="1.5"/><circle cx="6" cy="10" r="1.5"/>
-                         </svg>
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="currentColor">
+                          <circle cx="2" cy="2" r="1.5" /><circle cx="2" cy="6" r="1.5" /><circle cx="2" cy="10" r="1.5" />
+                          <circle cx="6" cy="2" r="1.5" /><circle cx="6" cy="6" r="1.5" /><circle cx="6" cy="10" r="1.5" />
+                        </svg>
                       </div>
 
                       <button onClick={(e) => toggleFavorito(e, doc.id)} className="absolute top-3 right-3 text-yellow-400 text-lg z-20 cursor-pointer hover:scale-110 transition-transform drop-shadow-sm">★</button>
-                      
+
                       <div className="flex items-start gap-2 mt-4 pointer-events-none select-none">
-                          <span className="text-xl drop-shadow-sm">{style.icon}</span>
-                          <div className="min-w-0">
-                              {doc.departamento && (
-                                <span className={`text-[6px] font-bold px-1.5 py-0.5 rounded-md border mb-1 inline-block whitespace-nowrap ${deptColors.active}`}>
-                                    {doc.departamento}
-                                </span>
-                              )}
-                              <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500 block leading-none">{style.label}</span>
-                          </div>
+                        <span className="text-xl drop-shadow-sm">{style.icon}</span>
+                        <div className="min-w-0">
+                          {doc.departamento && (
+                            <span className={`text-[6px] font-bold px-1.5 py-0.5 rounded-md border mb-1 inline-block whitespace-nowrap ${deptColors.active}`}>
+                              {doc.departamento}
+                            </span>
+                          )}
+                          <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500 block leading-none">{style.label}</span>
+                        </div>
                       </div>
-                      
+
                       <div className="pointer-events-none select-none">
-                          <h3 className="font-bold text-xs leading-tight mb-2 pr-2 opacity-90 text-slate-800 break-words">{getDisplayName(doc.nombre)}</h3>
-                          <div className="pointer-events-auto">
-                             <a href={doc.link} target="_blank" rel="noreferrer" className="text-[10px] text-blue-600 font-bold hover:text-blue-500 transition-colors flex items-center gap-1 cursor-pointer">Open File <span>→</span></a>
-                          </div>
+                        <h3 className="font-bold text-xs leading-tight mb-2 pr-2 opacity-90 text-slate-800 break-words">{getDisplayName(doc.nombre)}</h3>
+                        <div className="pointer-events-auto">
+                          <a href={doc.link} target="_blank" rel="noreferrer" className="text-[10px] text-blue-600 font-bold hover:text-blue-500 transition-colors flex items-center gap-1 cursor-pointer">Open File <span>→</span></a>
+                        </div>
                       </div>
                     </div>
                   );
                 })}
                 {validFavorites.length === 0 && (
-                    <div className="w-full min-h-[120px] flex items-center justify-center text-slate-600 text-xs opacity-90">Click ★ to pin files here</div>
+                  <div className="w-full min-h-[120px] flex items-center justify-center text-slate-600 text-xs opacity-90">Click ★ to pin files here</div>
                 )}
               </div>
             </div>
@@ -1162,33 +1162,32 @@ export default function App() {
         {/* --- PESTAÑAS DE DEPARTAMENTOS --- */}
         <div className="flex flex-wrap gap-2 mb-6">
           {CATEGORIAS.map(cat => {
-             const colors = getColorClasses(cat);
-             const isActive = catFiltro === cat;
-             return (
-               <button
-                  key={cat}
-                  onClick={() => { setCatFiltro(cat); setLetraFiltro('All'); }}
-                  className={`px-5 py-2.5 rounded-xl font-bold text-xs transition-all cursor-pointer border ${
-                    isActive 
-                    ? `${colors.active} shadow-md scale-105` 
-                    : `bg-white text-slate-500 border-slate-200 ${colors.hover}`
+            const colors = getColorClasses(cat);
+            const isActive = catFiltro === cat;
+            return (
+              <button
+                key={cat}
+                onClick={() => { setCatFiltro(cat); setLetraFiltro('All'); }}
+                className={`px-5 py-2.5 rounded-xl font-bold text-xs transition-all cursor-pointer border ${isActive
+                  ? `${colors.active} shadow-md scale-105`
+                  : `bg-white text-slate-500 border-slate-200 ${colors.hover}`
                   }`}
-               >
-                 {cat}
-               </button>
-             );
+              >
+                {cat}
+              </button>
+            );
           })}
         </div>
 
         {/* --- BUSCADOR --- */}
         <div className="relative mb-6 flex gap-3">
           <div className="relative flex-1">
-            <input 
-              type="text" 
-              placeholder="Search by file name..." 
-              value={busqueda} 
-              className="w-full pl-6 pr-6 py-4 bg-white rounded-2xl shadow-sm border border-slate-200 outline-none text-md focus:ring-2 focus:ring-blue-500/20 transition-all" 
-              onChange={(e) => { setBusqueda(e.target.value); setSugIndex(-1); setSugOpen(true); }} 
+            <input
+              type="text"
+              placeholder="Search by file name..."
+              value={busqueda}
+              className="w-full pl-6 pr-6 py-4 bg-white rounded-2xl shadow-sm border border-slate-200 outline-none text-md focus:ring-2 focus:ring-blue-500/20 transition-all"
+              onChange={(e) => { setBusqueda(e.target.value); setSugIndex(-1); setSugOpen(true); }}
               onFocus={() => setSugOpen(true)}
               onBlur={() => setTimeout(() => setSugOpen(false), 100)}
               onKeyDown={(e) => {
@@ -1237,7 +1236,7 @@ export default function App() {
             )}
           </div>
           {(busqueda || letraFiltro !== 'All' || catFiltro !== 'All' || stateFiltro) && (
-            <button onClick={() => {setBusqueda(''); setLetraFiltro('All'); setCatFiltro('All'); setStateFiltro('');}} className="bg-red-50 text-red-500 px-6 rounded-2xl font-bold text-sm hover:bg-red-500 hover:text-white transition-all cursor-pointer">Clear</button>
+            <button onClick={() => { setBusqueda(''); setLetraFiltro('All'); setCatFiltro('All'); setStateFiltro(''); }} className="bg-red-50 text-red-500 px-6 rounded-2xl font-bold text-sm hover:bg-red-500 hover:text-white transition-all cursor-pointer">Clear</button>
           )}
         </div>
 
@@ -1249,7 +1248,7 @@ export default function App() {
             ))}
           </div>
         </div>
-        
+
         {/* --- CATEGORÍAS POR ESTADO --- */}
         <div className="flex flex-wrap gap-1.5 mb-6 justify-center">
           {STATES.map(st => {
@@ -1258,11 +1257,10 @@ export default function App() {
               <button
                 key={st}
                 onClick={() => setStateFiltro(prev => (prev === st ? '' : st))}
-                className={`px-3 py-1.5 rounded-lg font-bold text-[10px] transition-all cursor-pointer border ${
-                  active 
+                className={`px-3 py-1.5 rounded-lg font-bold text-[10px] transition-all cursor-pointer border ${active
                   ? 'bg-slate-900 text-white border-slate-900 shadow-sm'
                   : 'bg-white text-slate-500 border-slate-200 hover:bg-slate-100'
-                }`}
+                  }`}
               >
                 {st}
               </button>
@@ -1277,52 +1275,52 @@ export default function App() {
             const isFav = favoritos.includes(doc.id);
             const isAnimating = animatingIds.includes(doc.id);
             const colors = getColorClasses(doc.departamento);
-            
+
             return (
               <div key={doc.id} className="group bg-white p-3 rounded-2xl border border-slate-100 flex items-center justify-between hover:shadow-md cursor-pointer  hover:border-blue-200 transition-all duration-300 relative overflow-visible z-0 hover:z-10">
                 <NotificationBadge tag={doc.tag} />
-                
-                <div className="flex items-center gap-3 flex-1 min-w-0">
-                    <div className={`w-10 h-10 ${style.bg} rounded-xl flex-shrink-0 flex items-center justify-center border border-slate-50 group-hover:scale-105 transition-transform`}>
-                        <span className="text-xl">{style.icon}</span>
-                    </div>
 
-                    <div className="min-w-0 flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                           <p className="text-[8px] font-black uppercase tracking-wider" style={{ color: style.color }}>{style.label}</p>
-                           {doc.departamento && (
-                             <span className={`text-[8px] font-bold px-1.5 py-0.5 rounded-md border ${colors.active}`}>
-                               {doc.departamento}
-                             </span>
-                           )}
-                        </div>
-                        <h3 className="font-bold text-slate-800 text-xs pr-1 group-hover:text-blue-600 transition-colors break-words">
-                            {getDisplayName(doc.nombre)}
-                        </h3>
+                <div className="flex items-center gap-3 flex-1 min-w-0">
+                  <div className={`w-10 h-10 ${style.bg} rounded-xl flex-shrink-0 flex items-center justify-center border border-slate-50 group-hover:scale-105 transition-transform`}>
+                    <span className="text-xl">{style.icon}</span>
+                  </div>
+
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <p className="text-[8px] font-black uppercase tracking-wider" style={{ color: style.color }}>{style.label}</p>
+                      {doc.departamento && (
+                        <span className={`text-[8px] font-bold px-1.5 py-0.5 rounded-md border ${colors.active}`}>
+                          {doc.departamento}
+                        </span>
+                      )}
                     </div>
+                    <h3 className="font-bold text-slate-800 text-xs pr-1 group-hover:text-blue-600 transition-colors break-words">
+                      {getDisplayName(doc.nombre)}
+                    </h3>
+                  </div>
                 </div>
 
                 <div className="flex items-center gap-2 ml-2">
-                    <div className="relative flex items-center justify-center w-8 h-8">
-                        <Motion.button 
-                            onClick={(e) => toggleFavorito(e, doc.id)}
-                            className="text-lg cursor-pointer z-10 flex items-center justify-center outline-none"
-                            initial={false}
-                            animate={{ 
-                                scale: isAnimating ? [1, 1.5, 1] : 1,
-                                color: isFav ? "#fbbf24" : "#e2e8f0"
-                            }}
-                            whileHover={{ scale: 1.2, color: isFav ? "#fbbf24" : "#fcd34d" }}
-                            whileTap={{ scale: 0.8 }}
-                            transition={{ type: "spring", stiffness: 500, damping: 20 }}
-                        >
-                            {isFav ? '★' : '☆'}
-                        </Motion.button>
-                    </div>
-                    
-                    <a href={doc.link} target="_blank" rel="noreferrer" className="flex items-center gap-1 px-3 py-1.5 bg-slate-50 rounded-lg text-slate-400 font-bold text-[9px] uppercase tracking-tighter hover:bg-blue-600 hover:text-white transition-all cursor-pointer">
-                        Open
-                    </a>
+                  <div className="relative flex items-center justify-center w-8 h-8">
+                    <Motion.button
+                      onClick={(e) => toggleFavorito(e, doc.id)}
+                      className="text-lg cursor-pointer z-10 flex items-center justify-center outline-none"
+                      initial={false}
+                      animate={{
+                        scale: isAnimating ? [1, 1.5, 1] : 1,
+                        color: isFav ? "#fbbf24" : "#e2e8f0"
+                      }}
+                      whileHover={{ scale: 1.2, color: isFav ? "#fbbf24" : "#fcd34d" }}
+                      whileTap={{ scale: 0.8 }}
+                      transition={{ type: "spring", stiffness: 500, damping: 20 }}
+                    >
+                      {isFav ? '★' : '☆'}
+                    </Motion.button>
+                  </div>
+
+                  <a href={doc.link} target="_blank" rel="noreferrer" className="flex items-center gap-1 px-3 py-1.5 bg-slate-50 rounded-lg text-slate-400 font-bold text-[9px] uppercase tracking-tighter hover:bg-blue-600 hover:text-white transition-all cursor-pointer">
+                    Open
+                  </a>
                 </div>
               </div>
             );
@@ -1336,15 +1334,15 @@ export default function App() {
           </div>
         )}
       </div>
-      
+
       {/* FOOTER */}
       <footer className="max-w-[90rem] mx-auto w-full mt-20 border-t border-slate-200 py-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
         <div>
-           <p className="text-slate-400 text-xs font-bold">© {new Date().getFullYear()} {CONFIG.nombre}</p>
+          <p className="text-slate-400 text-xs font-bold">© {new Date().getFullYear()} {CONFIG.nombre}</p>
         </div>
         <div className="flex gap-6">
-           <a href={`mailto:${CONFIG.emailSoporte}`} className="text-slate-400 hover:text-blue-600 text-xs font-bold py-1.5 transition-colors">Report Issue</a>
-           <button onClick={handleLogout} className="text-slate-400 hover:text-gray-600 text-xs bg-black text-white px-4 py-1.5 rounded-lg cursor-pointer font-bold transition-colors">Logout</button>
+          <a href={`mailto:${CONFIG.emailSoporte}`} className="text-slate-400 hover:text-blue-600 text-xs font-bold py-1.5 transition-colors">Report Issue</a>
+          <button onClick={handleLogout} className="text-slate-400 hover:text-gray-600 text-xs bg-black text-white px-4 py-1.5 rounded-lg cursor-pointer font-bold transition-colors">Logout</button>
         </div>
       </footer>
 
