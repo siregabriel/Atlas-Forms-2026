@@ -207,7 +207,7 @@ const DOCUMENTOS = [
   { id: 274, nombre: "Holiday Pay.docx", letra: "H", link: "https://atlasseniorliving.net/wp-content/uploads/2024/12/Holiday-Pay-Policy.docx", departamento: "Clinical Policy" },
   { id: 275, nombre: "HR Standards.xlsx", letra: "H", link: "https://atlasseniorliving.net/wp-content/uploads/2024/04/Atlas-HR-Standards.xlsx", departamento: "" },
   { id: 276, nombre: "Housekeeper.docx", letra: "H", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Housekeeper.docx", departamento: "Job Description" },
-  { id: 277, nombre: "Housekeeping & Laundry.docx", letra: "H", link: "https://atlasseniorliving.net/wp-content/uploads/2024/12/Housekeeping-and-Laundry-Policy.docx", departamento: "Clinical Policy" },
+  { id: 277, nombre: "Housekeeping & Laundry.pdf", letra: "H", link: "https://atlasseniorliving-my.sharepoint.com/:b:/p/fpatino/IQBFfXRVK26pTJUd-_gRGj0XAT1hjL_m6ORnlwjAHHJMoPg?e=xaiA30", departamento: "Clinical Policy" },
   { id: 278, nombre: "Housekeeping Standards.xlsx", letra: "H", link: "https://atlasseniorliving.net/wp-content/uploads/2024/04/Atlas-Housekeeping-Standards.xlsx", departamento: "" },
   { id: 495, nombre: "24 Hour Report", letra: "H", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/24-Hour-Report-Policy.docx", departamento: "Clinical Policy" },
 
