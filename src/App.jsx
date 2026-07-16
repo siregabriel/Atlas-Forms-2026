@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { motion as Motion } from 'framer-motion';
 
 const CONFIG = {
-  nombre: "Atlas Senior Living Forms Hub",
+  nombre: "Forms Hub",
   passwordCorrecto: "Atlas2026",
   emailSoporte: "grosales@atlasseniorliving.com",
   version: "1.4.5" // Update: Drag & Drop Fixed & Robust
