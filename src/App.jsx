@@ -363,7 +363,7 @@ const DOCUMENTOS = [
   { id: 418, nombre: "Resident Rights.docx", letra: "R", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/RESIDENT-RIGHTS.docx", departamento: "Clinical Policy" },
   { id: 419, nombre: "Resident at Risk P&P.docx", letra: "R", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/mrost/IQDmFDErb_i_TptL-IJS7HqnATtP0GBzFIj2BH2eNnp_xT8?CID=2e4d1a36-cb08-9a4c-a9a9-bc85210f5c22", departamento: "Clinical Policy" },
   { id: 526, nombre: "Resident & Guest Sign In.docx", letra: "R", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/Resident-and-Guest-Sign-In-Sign-Out-Policy.docx", departamento: "Clinical Policy" },
-  { id: 420, nombre: "Respite Move In Form.pdf", letra: "R", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/Move-In-Form-Respite.pdf", departamento: "" },
+  { id: 420, nombre: "Respite Move In Form.xlsx", letra: "R", link: "https://atlasseniorliving-my.sharepoint.com/:x:/p/fpatino/IQC4fa5tUl9rRq4YSZD8ouqFATTpWCnhm0RedeKclpT_qQ8?e=Lg2CfT", departamento: "" },
   { id: 421, nombre: "Restraints & Bed Rail Use.docx", letra: "R", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/mrost/IQCpigXrH9FuQ6VhMfYHekFOAXwQcVEbRFec5D8tW04G3Os?CID=3c89e11d-8f5c-1712-aaf7-fd53af3dc216", departamento: "Clinical Policy" },
   { id: 422, nombre: "Respirator Fit Test.pdf", letra: "R", link: "https://atlasseniorliving.net/wp-content/uploads/2022/09/Respirator-fit-test-record.pdf", departamento: "" },
   { id: 423, nombre: "Respite Addendum.docx", letra: "R", link: "https://atlasseniorliving.net/wp-content/uploads/2025/10/Respite-Addendum.docx", departamento: "" },
@@ -1082,7 +1082,9 @@ export default function App() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#0a0a0c] font-sans antialiased p-4">
         <div className="w-full max-w-md p-8 bg-[#16161a] border border-white/10 rounded-[2.5rem] shadow-2xl text-center">
-          <div className="inline-block p-4 bg-blue-600/10 rounded-3xl mb-4 border border-blue-500/20 text-4xl">💎</div>
+          <div className="inline-block mb-4">
+            <img src="/Atlas-Senior-Living.png" alt="Atlas Senior Living" className="h-20 w-auto mx-auto object-contain" />
+          </div>
           <h2 className="text-3xl font-bold text-white mb-8 tracking-tight">{CONFIG.nombre}</h2>
           <input
             type="password"
