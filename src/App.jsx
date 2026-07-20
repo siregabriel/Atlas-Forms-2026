@@ -546,7 +546,8 @@ const DOCUMENTOS = [
   { id: 661, nombre: "SCALF Monthly Assessment Full Page.docx", letra: "S", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/fpatino/IQDrK_6RGUJkSr2K-thrA-mZAawsFnpH0BbqeHL3mq7a7ws?e=aDuQYo", departamento: "" },
   { id: 662, nombre: "Resident Immunization Record Atlas Current.docx", letra: "R", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/fpatino/IQA4hZ9KhjgNT7zNy70aaeo2AZLlXltPKmlxfE2Xa1LDFjY?e=hn6ByM", departamento: "" },
   { id: 664, nombre: "ALF Monthly Assessment Form.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/fpatino/IQBITtyRaOLESaWBCfq8X8fcAYgcmkjiEQmDWQ2f9KwWmVg?e=PU3djS", departamento: "" },
-  
+  { id: 665, nombre: "Atlas Resident Photo Media Authorization.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/fpatino/IQDB4QJsoxLvT7l0-JIN5ziKAeTgC-mKkPH2-hpeCRV1hSU?e=7lSWqC", departamento: "" },
+
   // Ricky Kirk
   { id: 700, nombre: "Foodborne Illness Poster Atlas.pdf", letra: "F", link: "https://atlasseniorliving-my.sharepoint.com/my?viewid=9ec7daf6%2D1e1d%2D4d92%2D94c5%2Dd4a0fce5342c&id=%2Fpersonal%2Ffpatino%5Fatlasseniorliving%5Fcom%2FDocuments%2FForms%20Hub%2FFoodborne%20Illness%20Poster%20%2D%20Atlas%2Epdf&parent=%2Fpersonal%2Ffpatino%5Fatlasseniorliving%5Fcom%2FDocuments%2FForms%20Hub", departamento: "" },
 
