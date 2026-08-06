@@ -102,7 +102,7 @@ const DOCUMENTOS = [
   { id: 177, nombre: "Controlled Drug Shift.pdf", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQCjA0crsQutR6iPmfYuSy08Ae_-sb0XMoHSEqO86tKId0c?e=eCCU3L", departamento: "" },
   { id: 178, nombre: "Cooks Weekly Cleaning.pdf", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Cooks-Weekly.pdf", departamento: "" },
   { id: 179, nombre: "Coronaviurs Outbreak.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQAbWm0RT7ahQ5Dv-imrdi0CAdhiIrVzAe6KSGn7eCS_R8A?e=RhjdZH", departamento: "Clinical Policy" },
-  { id: 180, nombre: "Corrective Action.docx", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2022/10/Corrective-Action-Form.docx", departamento: "Clinical Policy" },
+  //{ id: 180, nombre: "Corrective Action.docx", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2022/10/Corrective-Action-Form.docx", departamento: "Clinical Policy" },
   { id: 181, nombre: "Covid Policy.docx", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/Covid-policy-03042025.docx", departamento: "Clinical Policy" },
   { id: 182, nombre: "COVID-19 Positive.docx", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/Covid-policy-03042025.docx", departamento: "Clinical Policy" },
   { id: 183, nombre: "COVID-19 Screening Log.pdf", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2022/09/Covid-Screening-Log.pdf", departamento: "" },
