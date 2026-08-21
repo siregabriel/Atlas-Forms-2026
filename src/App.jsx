@@ -103,7 +103,7 @@ const DOCUMENTOS = [
   { id: 178, nombre: "Cooks Weekly Cleaning.pdf", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Cooks-Weekly.pdf", departamento: "" },
   { id: 179, nombre: "Coronaviurs Outbreak.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQAbWm0RT7ahQ5Dv-imrdi0CAdhiIrVzAe6KSGn7eCS_R8A?e=RhjdZH", departamento: "Clinical Policy" },
   //{ id: 180, nombre: "Corrective Action.docx", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2022/10/Corrective-Action-Form.docx", departamento: "Clinical Policy" },
-  { id: 181, nombre: "Covid Policy.docx", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/Covid-policy-03042025.docx", departamento: "Clinical Policy" },
+  { id: 181, nombre: "Covid Policy 08172026.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/fpatino/IQC-jXOI6E3yQoFOW1IJtCOdAYO9dTGWEyMMwVNgO4TnDHA?e=NQZiP9", departamento: "Clinical Policy" },
   { id: 182, nombre: "COVID-19 Positive.docx", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/Covid-policy-03042025.docx", departamento: "Clinical Policy" },
   { id: 183, nombre: "COVID-19 Screening Log.pdf", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2022/09/Covid-Screening-Log.pdf", departamento: "" },
   { id: 184, nombre: "CPR Policy.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQBGWmiGvdzCRZXVVellasoiAcE2QkVRGjjXbJRKllm2Imw?e=x6SGsD", departamento: "Clinical Policy" },
@@ -189,7 +189,6 @@ const DOCUMENTOS = [
   { id: 259, nombre: "Freezer 2 Temperature.xlsx", letra: "F", link: "https://atlasseniorliving.net/wp-content/uploads/2022/10/Freezer-2-temperature.xlsx", departamento: "" },
   { id: 260, nombre: "Freezer 3 Temperature.xlsx", letra: "F", link: "https://atlasseniorliving.net/wp-content/uploads/2022/10/Freezer-3-temperature.xlsx", departamento: "" },
   // G
-  { id: 261, nombre: "Guidance for COVID-19 Positives.docx", letra: "G", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQBV8stX8UyjQrWmSPhJTMwZAdYNCkNW7q3nZtZJtsmCUhw?e=9vlQys", departamento: "Clinical Policy" },
   { id: 262, nombre: "Generator PP.docx", letra: "G", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQCg09gD765XR4uTDPCdDbT-AdcygjJFDDnPB0-NkFwtcFY?e=35jqfl", departamento: "Clinical Policy" },
   { id: 263, nombre: "Glucometer Log.pdf", letra: "G", link: "https://atlasseniorliving.net/wp-content/uploads/2022/09/Glucometer-Log.pdf", departamento: "" },
   { id: 264, nombre: "Grievance Policy.docx", letra: "G", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQDQLRCejcLMSrOOH_iEUIH0AYcGIivVgxaXu66Pce9sxoY?e=S7BtmP", departamento: "Clinical Policy" },
@@ -304,7 +303,7 @@ const DOCUMENTOS = [
   { id: 362, nombre: "Orientation Certificate.docx", letra: "O", link: "https://atlasseniorliving.net/wp-content/uploads/2024/03/Orientation-Certificate.docx", departamento: "" },
   { id: 363, nombre: "Ordering & Receipt of Medication.docx", letra: "O", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/mrost/IQAjgwAik5mjTI2al3MJtcePAVUnXcvln-XIT_TCRJqiMOI?CID=88141d85-4793-3b7d-0257-0fc1b6128aa7", departamento: "Clinical Policy" },
   { id: 364, nombre: "Orientation New Wellness Director.docx", letra: "O", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/mrost/IQA4wrEapF7aRpPrmC5UE2fPAfeKXT90q1Jp7I3h5xQ5XVA?CID=e57b39b0-c187-13da-e5c6-5bd7e9b123c3", departamento: "" },
-  { id: 365, nombre: "OSHA COVID-19.docx", letra: "O", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/mrost/IQC0wmC55MYpRJ4y-QR6N7pYAeJ421pEWd2Qb0SdiRrdVng?CID=0c0b876c-e0d7-5abf-28de-96b5520262f5", departamento: "Clinical Policy" },
+  { id: 365, nombre: "OSHA COVID-19 Policy 08172026.docx", letra: "O", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/fpatino/IQDw7cj9ar2yQ6eNjcWD7hoUAXkLsfJKknH4aIPeFqx8gXM?e=yZsdZK", departamento: "Clinical Policy" },
   { id: 366, nombre: "Out of Service Signage.docx", letra: "O", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Out-of-Service-Signage.docx", departamento: "" },
   { id: 367, nombre: "Oxygen Theraphy Safe.docx", letra: "O", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/mrost/IQACDZ1X-UnrSauJ6xL9qQzLAQIKnqDO0d1tK8hPGHIOTVM?CID=b4bd8a57-6445-cefc-3f94-46fc42bbc4f9", departamento: "Clinical Policy" },
   // P
@@ -321,7 +320,7 @@ const DOCUMENTOS = [
   { id: 378, nombre: "Pets in the Community.docx", letra: "P", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/mrost/IQCv7UtIc_G1Q4vV_qp4U9xDAa7vj1lP--7EKNiFQEsx3cI?CID=e6bb0660-2b2a-74ad-81d0-b1ccb11b4111", departamento: "Clinical Policy" },
   { id: 379, nombre: "Physical Examination.docx", letra: "P", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/mrost/IQBFrWPeeLBtQoxsnlO5UeVeAWvU1AJHmIoAGHmoqoeyS_s?CID=ed2ac04b-b998-8210-146e-ed4bbaf2e869", departamento: "Clinical Policy" },
   { id: 380, nombre: "Physician Forms.pdf", letra: "P", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Atlas-Phyician-Forms-.pdf-pool-alcohol-version.pdf", departamento: "" },
-  { id: 381, nombre: "Physician Orders.docx", letra: "P", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/mrost/IQBviLyO1KSySKM_I10hQQ8gAVJJso3JoiQswEP910hKa7c?CID=345626e9-b0ff-b9df-dc71-079cabbd2481", departamento: "Clinical Policy" },
+  { id: 381, nombre: "Physician order policy 08172026.docx", letra: "P", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/fpatino/IQABLXYQp840Tak31AK3zlsRAVEF_gQwook2FAGzUEzy_Bw?e=BZdNtN", departamento: "Clinical Policy" },
   { id: 382, nombre: "Preventing Transmission Infection.docx", letra: "P", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/mrost/IQA7TPnV_OWGQJrUKoXpFWcWAfMA8SZuQOENy8B1-XK13nE?CID=f3b27e9b-4f7d-e305-39b6-066084725d03", departamento: "Clinical Policy" },
   { id: 383, nombre: "Point Click Care Guidance.docx", letra: "P", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Point-Click-Care-Guidance.docx", departamento: "" },
   { id: 384, nombre: "Point Click User Manual.link", letra: "P", link: "https://drive.google.com/file/d/1F_2vnb4YSnPiVcIp5Ezf1v23oej3QIOY/view?usp=sharing", departamento: "Redirect Link" },
@@ -350,7 +349,6 @@ const DOCUMENTOS = [
   { id: 405, nombre: "Registered Nurse (RN).docx", letra: "R", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Registered-Nurse-RN.docx", departamento: "Job Description" },
   { id: 406, nombre: "Release of Deceased Resident.pdf", letra: "R", link: "https://atlasseniorliving.net/wp-content/uploads/2022/09/Release-of-Deceased-Resident-to-Funeral-Director.pdf", departamento: "" },
   { id: 407, nombre: "Release of Medication.docx", letra: "R", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/Medication-Release-Policy25.docx", departamento: "Clinical Policy" },
-  { id: 408, nombre: "Release Record.pdf", letra: "R", link: "https://atlasseniorliving.net/wp-content/uploads/2022/09/Authorization-For-Release-of-Resident-Records.pdf", departamento: "" },
   { id: 409, nombre: "Rent Cafe Flyer.pdf", letra: "R", link: "https://atlasseniorliving.net/wp-content/uploads/2024/10/Rent-Cafe-Flyer.pdf", departamento: "" },
   { id: 410, nombre: "Rent Ready Checklist.pdf", letra: "R", link: "https://atlasseniorliving.net/wp-content/uploads/2023/02/Atlas_-_Rent_Ready_Checklist.pdf", departamento: "" },
   { id: 411, nombre: "Reportable Events.pdf", letra: "R", link: "https://atlasseniorliving-my.sharepoint.com/personal/mrost_atlasseniorliving_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fmrost%5Fatlasseniorliving%5Fcom%2FDocuments%2FAttachments%2FReportable%2DEvents%2DPolicy%2D1%2Epdf&parent=%2Fpersonal%2Fmrost%5Fatlasseniorliving%5Fcom%2FDocuments%2FAttachments&ct=1780073481013&or=OWA%2DNT%2DMail&cid=561ff17c%2Da323%2D4b8a%2Da61e%2D2ba7b9a1a26c&ga=1", departamento: "Clinical Policy" },
@@ -547,6 +545,7 @@ const DOCUMENTOS = [
   { id: 662, nombre: "Resident Immunization Record Atlas Current.docx", letra: "R", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/fpatino/IQA4hZ9KhjgNT7zNy70aaeo2AZLlXltPKmlxfE2Xa1LDFjY?e=hn6ByM", departamento: "" },
   { id: 664, nombre: "ALF Monthly Assessment Form.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/fpatino/IQBITtyRaOLESaWBCfq8X8fcAYgcmkjiEQmDWQ2f9KwWmVg?e=PU3djS", departamento: "" },
   { id: 665, nombre: "Atlas Resident Photo Media Authorization.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/fpatino/IQDB4QJsoxLvT7l0-JIN5ziKAeTgC-mKkPH2-hpeCRV1hSU?e=7lSWqC", departamento: "" },
+  { id: 666, nombre: "Atlas Senior Living Outside Provider Note.docx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/fpatino/IQAVCvmQZesQRacIQFpctFwCAWYW2lXsoLkWQ0iUv6Lz0wM?e=aa6f8r", departamento: "" },
 
   // Ricky Kirk
   { id: 700, nombre: "Foodborne Illness Poster Atlas.pdf", letra: "F", link: "https://atlasseniorliving-my.sharepoint.com/my?viewid=9ec7daf6%2D1e1d%2D4d92%2D94c5%2Dd4a0fce5342c&id=%2Fpersonal%2Ffpatino%5Fatlasseniorliving%5Fcom%2FDocuments%2FForms%20Hub%2FFoodborne%20Illness%20Poster%20%2D%20Atlas%2Epdf&parent=%2Fpersonal%2Ffpatino%5Fatlasseniorliving%5Fcom%2FDocuments%2FForms%20Hub", departamento: "" },
@@ -757,7 +756,7 @@ export default function App() {
       });
     }
     const meteorCount = 3;
-    for (let i = 0; i < meteorCount; i++) { 
+    for (let i = 0; i < meteorCount; i++) {
       const dir = rnd() > 0.5 ? 1 : -1;
       const startX = dir === 1 ? -20 : size + 20;
       const startY = rnd() * size * 0.6 + size * 0.2;
