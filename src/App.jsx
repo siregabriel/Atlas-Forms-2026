@@ -102,7 +102,7 @@ const DOCUMENTOS = [
   { id: 177, nombre: "Controlled Drug Shift.pdf", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQCjA0crsQutR6iPmfYuSy08Ae_-sb0XMoHSEqO86tKId0c?e=eCCU3L", departamento: "" },
   { id: 178, nombre: "Cooks Weekly Cleaning.pdf", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Cooks-Weekly.pdf", departamento: "" },
   { id: 179, nombre: "Coronaviurs Outbreak.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQAbWm0RT7ahQ5Dv-imrdi0CAdhiIrVzAe6KSGn7eCS_R8A?e=RhjdZH", departamento: "Clinical Policy" },
-  //{ id: 180, nombre: "Corrective Action.docx", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2022/10/Corrective-Action-Form.docx", departamento: "Clinical Policy" },
+  { id: 180, nombre: "Corrective Action.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQCCMLlBdL8TR59lMpMbCM2SATSD9gX0kJDtF1nuXYdgIvE?e=mqLR69", departamento: "Clinical Policy" },
   { id: 181, nombre: "Covid Policy 08172026.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/fpatino/IQC-jXOI6E3yQoFOW1IJtCOdAYO9dTGWEyMMwVNgO4TnDHA?e=NQZiP9", departamento: "Clinical Policy" },
   { id: 182, nombre: "COVID-19 Positive.docx", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/Covid-policy-03042025.docx", departamento: "Clinical Policy" },
   { id: 183, nombre: "COVID-19 Screening Log.pdf", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2022/09/Covid-Screening-Log.pdf", departamento: "" },
@@ -550,7 +550,7 @@ const DOCUMENTOS = [
   { id: 668, nombre: "Spring Hill Residency Agreement Corrected.pdf", letra: "S", link: "https://atlasseniorliving-my.sharepoint.com/:b:/p/fpatino/IQALsQnyA9xzRoEI89R8vEbjASlMRTS9EgE9mmU65eqDe8k?e=vuIw6N", departamento: "" },
   { id: 669, nombre: "Foodborne Illness Poster Atlas.pdf", letra: "F", link: "https://atlasseniorliving-my.sharepoint.com/my?viewid=9ec7daf6%2D1e1d%2D4d92%2D94c5%2Dd4a0fce5342c&id=%2Fpersonal%2Ffpatino%5Fatlasseniorliving%5Fcom%2FDocuments%2FForms%20Hub%2FFoodborne%20Illness%20Poster%20%2D%20Atlas%2Epdf&parent=%2Fpersonal%2Ffpatino%5Fatlasseniorliving%5Fcom%2FDocuments%2FForms%20Hub", departamento: "" },
   { id: 700, nombre: "Capital Expenditure (CapEx) Procedure Policy", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQBtOdBtBpx0SrW5GRAYBVG2Ac087VLK3hBFUkJw2ZCeE8g?e=WziLAz", departamento: "" },
-
+  { id: 701, nombre: "Fentanyl Policy", letra: "F", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQA_AyzmzNgeToV0-QnKQ1UfAV3hz7PV3w-at_Go_joejXU?e=EkqHNL", departamento: "Clinical Policy" },
 ];
 
 const CATEGORIAS = ['All', 'Clinical Policy', 'Job Description', 'Redirect Link'];
