@@ -549,8 +549,8 @@ const DOCUMENTOS = [
   { id: 667, nombre: "Request for Authorized Electronic Monitoring no audio.docx", letra: "R", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/fpatino/IQD8sQatvBkrTpGVcrrIbVDSAXuFAA9SXa01jsR1SqwtLVE?e=Hx0lGf", departamento: "" },
   { id: 668, nombre: "Spring Hill Residency Agreement Corrected.pdf", letra: "S", link: "https://atlasseniorliving-my.sharepoint.com/:b:/p/fpatino/IQALsQnyA9xzRoEI89R8vEbjASlMRTS9EgE9mmU65eqDe8k?e=vuIw6N", departamento: "" },
   { id: 669, nombre: "Foodborne Illness Poster Atlas.pdf", letra: "F", link: "https://atlasseniorliving-my.sharepoint.com/my?viewid=9ec7daf6%2D1e1d%2D4d92%2D94c5%2Dd4a0fce5342c&id=%2Fpersonal%2Ffpatino%5Fatlasseniorliving%5Fcom%2FDocuments%2FForms%20Hub%2FFoodborne%20Illness%20Poster%20%2D%20Atlas%2Epdf&parent=%2Fpersonal%2Ffpatino%5Fatlasseniorliving%5Fcom%2FDocuments%2FForms%20Hub", departamento: "" },
-  { id: 700, nombre: "Capital Expenditure (CapEx) Procedure Policy", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQBtOdBtBpx0SrW5GRAYBVG2Ac087VLK3hBFUkJw2ZCeE8g?e=WziLAz", departamento: "" },
-  { id: 701, nombre: "Fentanyl Policy", letra: "F", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQA_AyzmzNgeToV0-QnKQ1UfAV3hz7PV3w-at_Go_joejXU?e=EkqHNL", departamento: "Clinical Policy" },
+  { id: 700, nombre: "Capital Expenditure (CapEx) Procedure Policy.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQBtOdBtBpx0SrW5GRAYBVG2Ac087VLK3hBFUkJw2ZCeE8g?e=WziLAz", departamento: "" },
+  { id: 701, nombre: "Fentanyl Policy.docx", letra: "F", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQA_AyzmzNgeToV0-QnKQ1UfAV3hz7PV3w-at_Go_joejXU?e=EkqHNL", departamento: "Clinical Policy" },
 ];
 
 const CATEGORIAS = ['All', 'Clinical Policy', 'Job Description', 'Redirect Link'];
