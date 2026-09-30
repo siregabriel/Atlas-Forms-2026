@@ -83,7 +83,7 @@ const DOCUMENTOS = [
   { id: 157, nombre: "Change of Condition.pdf", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Change-of-Condition-Policy.pdf", departamento: "Clinical Policy" },
   { id: 158, nombre: "Chemical Safety.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQD2865g-ZHESbeIU4Vl2ilKAatFIoVPopwHFPE_TD1a8ms?e=TeP5Df", departamento: "Clinical Policy" },
   { id: 159, nombre: "Circle of Excellence.docx", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2023/03/circle-of-excellence-criteria.docx", departamento: "Clinical Policy" },
-  { id: 160, nombre: "Clinical Standards.xlsx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:x:/p/mrost/ETMUjiepEy1Fuv7DN73Vs9oBJfROlBVjbRHq90aoipvNLw?e=XAUVUW", departamento: "" },
+  { id: 160, nombre: "Clinical Standards.xlsx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:x:/p/grosales/IQDaflQXseFfRrTizC67A7HNAQr_GoFVGvHTUV7NBqRiGFQ?e=7n7Ndp", departamento: "" },
   { id: 161, nombre: "CMA Request.link", letra: "C", link: "https://atlasseniorliving.net/forms-graphics/cma-new-user/", departamento: "Redirect Link" },
   { id: 162, nombre: "Cognitive Evaluation.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQDk3XAEWZEGSZb5OgoBotLRAYNX09sfXRz-bWCGc4A2tpM?e=H3R3h7", departamento: "Clinical Policy" },
   { id: 163, nombre: "Comission Template.xlsx", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2025/07/Sales-250-Commission-Template-2025.xlsx", departamento: "" },
