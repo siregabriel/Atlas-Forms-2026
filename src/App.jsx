@@ -80,7 +80,7 @@ const DOCUMENTOS = [
   { id: 154, nombre: "Certified Medication Assistant.docx", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Certified-Medication-Assistant.docx", departamento: "Job Description" },
   { id: 155, nombre: "CEO Letter.pdf", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2024/03/CEO-Letter.pdf", departamento: "" },
   { id: 156, nombre: "Change in Health Status.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQC1s10ai1OGTaSdPJYeIv0PAfdbxayllBp4-jIJHZELYz4?e=xV4Uxx", departamento: "Clinical Policy" },
-  { id: 157, nombre: "Change of Condition.pdf", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Change-of-Condition-Policy.pdf", departamento: "Clinical Policy" },
+  { id: 157, nombre: "Care Plan | Change of Condition.pdf", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Change-of-Condition-Policy.pdf", departamento: "Clinical Policy" },
   { id: 158, nombre: "Chemical Safety.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQD2865g-ZHESbeIU4Vl2ilKAatFIoVPopwHFPE_TD1a8ms?e=TeP5Df", departamento: "Clinical Policy" },
   { id: 159, nombre: "Circle of Excellence.docx", letra: "C", link: "https://atlasseniorliving.net/wp-content/uploads/2023/03/circle-of-excellence-criteria.docx", departamento: "Clinical Policy" },
   { id: 160, nombre: "Clinical Standards.xlsx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:x:/p/grosales/IQDaflQXseFfRrTizC67A7HNAQr_GoFVGvHTUV7NBqRiGFQ?e=7n7Ndp", departamento: "" },
@@ -351,7 +351,7 @@ const DOCUMENTOS = [
   { id: 407, nombre: "Release of Medication.docx", letra: "R", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/Medication-Release-Policy25.docx", departamento: "Clinical Policy" },
   { id: 409, nombre: "Rent Cafe Flyer.pdf", letra: "R", link: "https://atlasseniorliving.net/wp-content/uploads/2024/10/Rent-Cafe-Flyer.pdf", departamento: "" },
   { id: 410, nombre: "Rent Ready Checklist.pdf", letra: "R", link: "https://atlasseniorliving.net/wp-content/uploads/2023/02/Atlas_-_Rent_Ready_Checklist.pdf", departamento: "" },
-  { id: 411, nombre: "Reportable Events.pdf", letra: "R", link: "https://atlasseniorliving-my.sharepoint.com/personal/mrost_atlasseniorliving_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fmrost%5Fatlasseniorliving%5Fcom%2FDocuments%2FAttachments%2FReportable%2DEvents%2DPolicy%2D1%2Epdf&parent=%2Fpersonal%2Fmrost%5Fatlasseniorliving%5Fcom%2FDocuments%2FAttachments&ct=1780073481013&or=OWA%2DNT%2DMail&cid=561ff17c%2Da323%2D4b8a%2Da61e%2D2ba7b9a1a26c&ga=1", departamento: "Clinical Policy" },
+  { id: 411, nombre: "Reportable Events.pdf", letra: "R", link: "https://atlasseniorliving-my.sharepoint.com/:b:/p/grosales/IQCYxHrSwE7KSKBmyWnIopusAc92ug-RVaBXFa1XcLSjuOc?e=doUoPM", departamento: "Clinical Policy" },
   { id: 412, nombre: "Resident Care Coordinator.docx", letra: "R", link: "https://atlasseniorliving.net/wp-content/uploads/2026/02/Resident-Care-Coordinator.docx", departamento: "Clinical Policy" },
   { id: 413, nombre: "Resident Council Concern Response.docx", letra: "R", link: "https://atlasseniorliving.net/wp-content/uploads/2024/08/Resident-Council-Concern-Response-Form.docx", departamento: "" },
   { id: 414, nombre: "Resident Council Meetings.docx", letra: "R", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/mrost/IQBrckVCKW8YSoPG3tb92XKRAU-oVhQcudD7gT-RGwMVlI8?CID=ad12fb21-e369-08da-0dfe-4a195baedcbb", departamento: "Clinical Policy" },
@@ -551,6 +551,8 @@ const DOCUMENTOS = [
   { id: 669, nombre: "Foodborne Illness Poster Atlas.pdf", letra: "F", link: "https://atlasseniorliving-my.sharepoint.com/my?viewid=9ec7daf6%2D1e1d%2D4d92%2D94c5%2Dd4a0fce5342c&id=%2Fpersonal%2Ffpatino%5Fatlasseniorliving%5Fcom%2FDocuments%2FForms%20Hub%2FFoodborne%20Illness%20Poster%20%2D%20Atlas%2Epdf&parent=%2Fpersonal%2Ffpatino%5Fatlasseniorliving%5Fcom%2FDocuments%2FForms%20Hub", departamento: "" },
   { id: 700, nombre: "Capital Expenditure (CapEx) Procedure Policy.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQBtOdBtBpx0SrW5GRAYBVG2Ac087VLK3hBFUkJw2ZCeE8g?e=WziLAz", departamento: "" },
   { id: 701, nombre: "Fentanyl Policy.docx", letra: "F", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQA_AyzmzNgeToV0-QnKQ1UfAV3hz7PV3w-at_Go_joejXU?e=EkqHNL", departamento: "Clinical Policy" },
+  { id: 702, nombre: "Change of Condition Nurse Education Competency.docx", letra: "C", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQClLasXgOfXRoax7n5mwO-0AW1Adqe6Q17z5RZTyYVA7Fk?e=TpKRJs", departamento: "Clinical Policy" },
+  { id: 703, nombre: "Pharmacy Medication Delivery Receipt Security Policy.docx", letra: "P", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/grosales/IQClLasXgOfXRoax7n5mwO-0AW1Adqe6Q17z5RZTyYVA7Fk?e=b6vet0s", departamento: "Clinical Policy" }
 ];
 
 const CATEGORIAS = ['All', 'Clinical Policy', 'Job Description', 'Redirect Link'];
