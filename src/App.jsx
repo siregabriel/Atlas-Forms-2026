@@ -298,7 +298,7 @@ const DOCUMENTOS = [
   { id: 358, nombre: "Nurses Notes.docx", letra: "N", link: "https://atlasseniorliving.net/wp-content/uploads/2025/03/Nurses-Notes-Policy-1.docx", departamento: "Clinical Policy" },
   // O
   { id: 359, nombre: "Offer Letter.docx", letra: "O", link: "https://atlasseniorliving.net/wp-content/uploads/2023/05/Atlas-Offer-letter.docx", departamento: "" },
-  { id: 360, nombre: "Operations Standards 2025.xlsx", letra: "O", link: "https://atlasseniorliving.net/wp-content/uploads/2025/08/Atlas-Standards-2025.xlsx", departamento: "" },
+  { id: 360, nombre: "Atlas Standards 2025.xlsx", letra: "A", link: "https://atlasseniorliving-my.sharepoint.com/:x:/p/grosales/IQBa8np4z9pxQp--HEMeTaR6AaR-xJlhtZOk0-YG508GHws?e=6IYuJg", departamento: "" },
   { id: 361, nombre: "Open Close Daily.xlsx", letra: "O", link: "https://atlasseniorliving.net/wp-content/uploads/2022/10/Open-close-daily.xlsx", departamento: "" },
   { id: 362, nombre: "Orientation Certificate.docx", letra: "O", link: "https://atlasseniorliving.net/wp-content/uploads/2024/03/Orientation-Certificate.docx", departamento: "" },
   { id: 363, nombre: "Ordering & Receipt of Medication.docx", letra: "O", link: "https://atlasseniorliving-my.sharepoint.com/:w:/p/mrost/IQAjgwAik5mjTI2al3MJtcePAVUnXcvln-XIT_TCRJqiMOI?CID=88141d85-4793-3b7d-0257-0fc1b6128aa7", departamento: "Clinical Policy" },
